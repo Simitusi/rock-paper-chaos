@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+
+  <!-- CHOICE BUTTONS -->
+  <div id="game">
+    <button onclick="play('rock')" class="choice-btn">
+      <img src="rock.png" alt="Rock">
+    </button>
+    <button onclick="play('paper')" class="choice-btn">
+      <img src="paper.png" alt="Paper">
+    </button>
+    <button onclick="play('scissors')" class="choice-btn">
+      <img src="scissors.png" alt="Scissors">
+    </button>
+  </div>
+
+  <!-- BATTLE ZONE -->
+  <div id="battle-arena" style="display: none;">
+    <div id="player-choice" class="battle-img"></div>
+    <div id="vs-text">VS</div>
+    <div id="computer-choice" class="battle-img"></div>
+  </div>
+
+  <!-- RESULT DISPLAY -->
+  <p id="result" style="display: none;">Make your move!</p>
+  <p id="score">Player: 0 | Computer: 0</p>
+
+  <!-- CONTROL BUTTONS -->
+  <div id="button-container">
+    <button id="ok-btn" onclick="resetGame()" style="display: none;">OK</button>
+    <button onclick="resetGame(true)" id="reset-btn">🔁 New Game</button>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

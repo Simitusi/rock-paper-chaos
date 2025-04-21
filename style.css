@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2e2e2e);
+    background-size: 400% 400%;
+    animation: backgroundShift 20s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  #game {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .choice-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .choice-btn img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #888;
+    transition: all 0.3s ease;
+  }
+  
+  .choice-btn:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff;
+  }
+  
+  #reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #reset-btn:hover {
+    background-color: #ff2f2f;
+  }
+  
+  #result {
+    font-size: 1.5em;
+    margin: 20px 0;
+    min-height: 2em;
+  }
+  
+  #score {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  @keyframes flashAnim {
+    0% { opacity: 0.5; transform: scale(1.1); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.5; transform: scale(1.1); }
+  }
+  
+  .flash {
+    animation: flashAnim 0.4s ease;
+  }
+ 
+  #battle-arena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+  }
+  
+  .battle-img {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  
+  
+  #vs-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+
+  @keyframes punchLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px) scale(1.2); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes punchRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-20px) scale(1.2); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px #00ffc3; }
+    50% { box-shadow: 0 0 40px #00ffc3, 0 0 60px #00ffc3; }
+    100% { box-shadow: 0 0 10px #00ffc3; }
+  }
+  
+  .winner-glow {
+    animation: pulseGlow 1.2s infinite ease-in-out;
+    transform: scale(1.2);
+  }
+
+  #ok-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #00ffc3;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffc3;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #ok-btn:hover {
+    background-color: #00dab0;
+    transform: scale(1.05);
+  }
+
+  #button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  @keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
